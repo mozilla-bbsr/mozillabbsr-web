@@ -1,25 +1,18 @@
-.App {
-  text-align: center;
+
+#mozilla-typing-text {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 3em;
+  font-weight: bold;
 }
 
 .App-logo {
   height: 40vmin;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #09d3ac;
 }
+
 body { 
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1; 
@@ -52,4 +45,32 @@ body {
   background: #ddd;
   text-decoration: none;
   color: #555;
+}
+
+#container {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  position: relative;
+  border-radius: 80%;
+  animation: spin 10s linear infinite;
+}
+.item {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 80%;
+  position: absolute;
+  animation: spin 10s linear infinite reverse;
+  margin: auto;
+  padding: 20px;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.hero-side-by-side {
+  display: flex;
 }
