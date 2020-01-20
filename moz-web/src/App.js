@@ -7,6 +7,7 @@ import Footer from './components/layout/Footer';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import HomePage from './components/HomePage';
+import Events from './components/Events/Events';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact path='/' component={HomePage} />
         <Route path='/About' component={AboutUs} />
         <Route path='/Contact' component={ContactUs} />
+        <Route path='/events' component={Events} />
       </Switch>
       <br/>
       <br/>

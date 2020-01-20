@@ -208,6 +208,21 @@ figure.effect-chico:hover p {
 	transform: scale(1);
 }
 
+.job {
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0;
+	padding: 20px 10px;
+	align-items: center;
+	background-color: #edf7fa;
+  }
+  .job:hover {
+	cursor: pointer;
+	color:#666666;
+  }
+
 @media screen and (max-width: 50em) {
 	.content {
 		padding: 0 10px;

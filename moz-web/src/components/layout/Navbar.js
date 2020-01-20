@@ -11,7 +11,7 @@ const Navbar = () => {
                 <ul class="navbar-nav ml-auto">
                   <li class="nav-item active"><a href="/" class="nav-link font-italic"> Home </a></li>
                   <li class="nav-item active"><a href="/About" class="nav-link font-italic"> About </a></li>
-                  <li class="nav-item active"><a href="#" class="nav-link font-italic"> Events </a></li>
+                  <li class="nav-item active"><a href="/events" class="nav-link font-italic"> Events </a></li>
                   <li class="nav-item active"><a href="#" class="nav-link font-italic"> Gallery </a></li>
                   <li class="nav-item active"><a href="/contact" class="nav-link font-italic"> Contact</a></li>
                 </ul>
