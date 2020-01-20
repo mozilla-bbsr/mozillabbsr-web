@@ -14,6 +14,7 @@ import cpp from '../assets/cpp.png';
 import python from '../assets/python.png';
 import react from '../assets/react.png';
 import js from '../assets/js.png';
+import logo from '../assets/logo-footer.png'
 
 import event1 from '../assets/Events/1.jpg';
 import event2 from '../assets/Events/2.jpg';
@@ -26,7 +27,7 @@ import event5 from '../assets/Events/5.jpg';
 
 const AnimatedTypingComponent = () => (
   <Typing speed={50}>
-    <span id="mozilla-typing-text">Mozilla Club Bbsr</span>
+    <span id="mozilla-typing-text">Welcome to Mozilla BBSR</span>
     <Cursor />
   </Typing>
 );
@@ -38,13 +39,13 @@ const cardStyle = {
 class HomePage extends React.Component {
 
   lazyheroStyle = {
-    'margin-top': '25vh',
-    'margin-left': '10vh'
+    // 'margin-top': '25vh',
+    // 'margin-left': '10vh'
   };
 
   componentDidMount() {
 
-    var radius = 100; // adjust to move out items in and out 
+    var radius = 80; // adjust to move out items in and out 
     var fields = $('.item'),
       container = $('#container'),
       width = container.width(),
@@ -66,8 +67,8 @@ class HomePage extends React.Component {
   }
 
   rotatingIconsStyle = {
-    'margin-top': '25vh',
-    'margin-left': '60%'
+    'margin-top': '15vh',
+    'margin-left': '22%'
   };
 
   rotatingLogo = {
@@ -77,12 +78,20 @@ class HomePage extends React.Component {
 
   render() {
     return (
-      <div className="home">
-        <div className="hero-side-by-side">
-          <LazyHero style={this.lazyheroStyle} imageSrc="../public/mozbbsr.jpeg" isCentered={false}>
+      // <div className="home">
+      <div>
+        <br/> <br/> <br/>
+        {/* <div className="hero-side-by-side"> */}
+          <div class="row">
+          <div class="col-sm-5 col-lg-10 text-center">
+          <LazyHero style={this.lazyheroStyle} imageSrc={logo}  isCentered={true}>
             {AnimatedTypingComponent()}
           </LazyHero>
-          <div style={this.rotatingIconsStyle} id="container">
+     
+
+          </div>
+          {/* <div class="col-sm-2 text-center"> */}
+          {/* <div style={this.rotatingIconsStyle} id="container">
             <div class="item">
               <img style={this.rotatingLogo} src={adobe} alt={"Adobe"} />
             </div>
@@ -96,8 +105,10 @@ class HomePage extends React.Component {
               <img style={this.rotatingLogo} src={cpp} alt={"C++"} />
             </div>
             
+          </div> */}
+          {/* </div> */}
           </div>
-          </div>
+          {/* </div> */}
 
 
           <div class="bg-light">

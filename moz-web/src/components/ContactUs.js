@@ -1,29 +1,89 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+// import axios from 'axios';
 
 
 class ContactUs extends Component {
-    state = {
-        fullName: '',
-        email: '',
-        mobile:'',        
-        comment: '',
-    }
 
-    handleSubmit = (e) => {
-       e.preventDefault();
-       console.log(this.state)
-       
-   }
-    handleChange = (e) => {
-       this.setState({
-           [e.target.id]:e.target.value
-       }) 
+    constructor(props) {
+        super(props);
+  
+        this.onChangeName = this.onChangeName.bind(this);  
+        this.onChangeEmail = this.onChangeEmail.bind(this); 
+        this.onChangeContact = this.onChangeContact.bind(this);
+        this.onChangeComment = this.onChangeComment.bind(this);
+  
+        this.onSubmit = this.onSubmit.bind(this);
+  
+        this.state = {
+            name: '',
+            email: '',
+            contact:'',        
+            comment: '',
+        };
+      }
+   
+
+      onChangeName(e) {
+        this.setState({
+          name: e.target.value
+        });
+      }
+
+      onChangeContact(e) {
+        this.setState({
+          contact: e.target.value
+        });
+      }
+
+      onChangeEmail(e) {
+        this.setState({
+          email: e.target.value
+        });
+      }
+
+      onChangeComment(e) {
+        this.setState({
+          comment: e.target.value
+        });
+      }
+
+      onSubmit(e) {
+        e.preventDefault();
+  
+        const Params = {
+          name: this.state.name,        
+          email: this.state.email,
+          contact: this.state.contact,
+          comment: this.state.comment,
+         
+        };
+  
+    //     axios({
+    //       method: 'POST',
+    //       url: '#',
+    //       data: Params
+    //     }).then(response => {
+    //       if (response.data.success) {
+    //         alert("Response Noted");
+    //      //    this.props.onSubmit(response.data.success);
+    //         this.setState({
+    //           name: '',
+    //           course:'',
+    //           email: '',             
+    //           contact: ''              
+    //         });
+    //       } else {
+    //         // alert(response.data.message);
+    //      //    this.props.onSubmit(response.data.message);
+    //       }
+    //     });
+    //   }
+
     }
     render() {
         return (    
                 <div className="container"> 
-                <br/>
-                <br/>
+                <br/><br/><br/><br/>
                     <div className="row">
                     <div className="col-md-12">
                     <h1 className="display-4">Get In Touch</h1>
@@ -61,64 +121,67 @@ class ContactUs extends Component {
                     
                     </div>
                     <div className="col-md-6">
-                        <div className="card">
-                        <form onSubmit = {this.handleSubmit}>
-                            <div className="card-body">
-                            
-                                    <div className="form-row">
-                                        <div className="form-group col-md-12"> 
-                                        <div className = "input-field"> 
-                                            <input type ="text" className="form-control" id = "fullName" name = "fullName" onChange={this.handleChange} required="required" placeholder="Full Name"/>
-                                        </div>
-                                        </div>
-                                        <div className="form-group col-md-12">  
-                                        <div className = "input-field">                         
-                                            <input type="email" className="form-control" id="email" placeholder="Email" required="required" onChange={this.handleChange}/>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div className="form-row">
-                                        <div className="form-group col-md-12">
-                                        <div className = "input-field">
-                                            <input id="mobile" placeholder="Mobile No." className="form-control" type="tel" onChange= {this.handleChange}/>
-                                        </div>
-                                        </div>
-                                        
-                                        <div className="form-group col-md-12">
-                                        <div className = "input-field">
-                                                <textarea id="comment" name="comment" cols="40" rows="5" onChange= {this.handleChange} placeholder="Your Message"className="form-control"></textarea>
-                                        </div>
-                                        </div>
-                                    </div>
-                                                            
-                                        <div className="form-row">
-                                        <div className = "input-field">                        
-                                            <button type="button" className="btn btn-success">Submit
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                </form>
+                        {/* <div className="card"> */}
+
+                        <form onSubmit={this.onSubmit}>
+                <div className='form-group md-form'>
+                  <input
+                    type='text'
+                    className='form-control'
+                    placeholder='Enter Your Name'
+                    value={this.state.name}
+                    onChange={this.onChangeName}
+                    required
+                  />
+                </div>
+                <div className='form-group md-form'>
+                  <input
+                    type='email'
+                    placeholder='E-Mail Address'
+                    className='form-control'
+                    value={this.state.email}
+                    onChange={this.onChangeEmail}
+                    required
+                  />
+                </div>
+                <div className='form-group md-form'>
+                  <input
+                    type='text'
+                    maxLength='10'
+                    pattern='[0-9]{10}'
+                    className='form-control'
+                    placeholder='Contact No.'
+                    value={this.state.contact}
+                    onChange={this.onChangeContact}
+                    required
+                  />
+                </div>
+                <div className='form-group '>
+                     <textarea cols="40" rows="5" onChange= {this.onChangeComment} placeholder="Your Message"className="form-control" required></textarea>
+                </div>              
+
+                <br />
+                <div class='form-group text-center'>
+                  <button
+                    class='btn btn-default text-white btn-lg'
+                    style={{ fontFamily: 'Acme' }}
+                  >
+                    Send <i class='fa fa-paper-plane-o ml-1'></i>
+                  </button>
+                </div>
+              </form>                      
                         </div>
                         <br/>
-                                    <hr/>
-                        <div className="social">
-                        <ul className="list-inline list-unstyled">
-                            <li className="list-inline-item">
-                                <a href="https://www.facebook.com/mozillabbsr/"><i className="fa fa-facebook-square fa-4x"></i></a>
-                            </li>
-                            <li className="list-inline-item">
-                                <a href="mailto:mozillabbsr@gmail.com?Subject=Hello"><i className="fa fa-envelope-square fa-4x" style={{color:'black'}}aria-hidden="true"></i></a>
-                            </li>
-                            
-                        </ul>
-                    </div>
+                        <hr/>
+                       
 
                     </div>
                 </div>
-            </div>
+            // </div>
         )
     }
 }
 
 export default ContactUs;
+
+   

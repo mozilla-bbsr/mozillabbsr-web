@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-
+import '../../assets/css/home.css';
 
 const Navbar = () => {
        return (
@@ -9,11 +9,23 @@ const Navbar = () => {
               <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
               <div id="navbarSupportedContent" class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
-                  <li class="nav-item active"><a href="/" class="nav-link font-italic"> Home </a></li>
-                  <li class="nav-item active"><a href="/About" class="nav-link font-italic"> About </a></li>
-                  <li class="nav-item active"><a href="/events" class="nav-link font-italic"> Events </a></li>
-                  <li class="nav-item active"><a href="#" class="nav-link font-italic"> Gallery </a></li>
-                  <li class="nav-item active"><a href="/contact" class="nav-link font-italic"> Contact</a></li>
+
+                  <li class="nav-item ">
+                  <Link to='/' className='nav-link text-dark'style={{ fontFamily: 'sans-serif' }}>  Home   </Link>    
+                  </li> 
+                  <li class="nav-item ">
+                  <Link to='/About' className='nav-link text-dark'style={{ fontFamily: 'sans-serif' }}>  About   </Link>    
+                  </li> 
+                  <li class="nav-item ">
+                  <Link to='/events' className='nav-link text-dark'style={{ fontFamily: 'sans-serif' }}>  Events   </Link>    
+                  </li>             
+                  <li class="nav-item ">
+                  <Link to='/Gallery' className='nav-link text-dark'style={{ fontFamily: 'sans-serif' }}>  Gallery   </Link>    
+                  </li> 
+                  <li class="nav-item ">
+                  <Link to='/Contact' className='nav-link text-dark'style={{ fontFamily: 'sans-serif' }}>  Contact   </Link>    
+                  </li> 
+
                 </ul>
               </div>
             </div>
