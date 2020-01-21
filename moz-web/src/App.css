@@ -1,3 +1,6 @@
+/* .navbar-default {
+    background-color: rgb(0, 0, 0);
+	/* border-color: #E7E7E7; */
 
 #mozilla-typing-text {
   font-family: 'Work Sans', sans-serif;
@@ -236,3 +239,20 @@ figure.effect-chico:hover p {
 	}
 }
 /* ============================================ */
+
+  .img-preview > div,
+  [file-drop-preview] div {
+	display: inline-block;
+	position: relative;
+  }
+  .img-preview img,
+  [file-drop-preview] img {
+	max-width: 00px;
+	max-height: 100px;
+	width: auto;
+	height: auto;
+  }
+  .img-preview > div,
+  [file-drop-preview] > div {
+	margin: 0.25em;
+  }

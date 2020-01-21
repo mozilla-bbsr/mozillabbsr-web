@@ -16,7 +16,7 @@ const Footer = () => {
     <div>
      <footer class="footer">
   <div class="container">
-    <div class="row">
+    <div class="row text-white">
     <div class="col-sm-3">
             <h3 class="text-center font-weight-bold">Mozilla BBSR</h3>
             <br/>
