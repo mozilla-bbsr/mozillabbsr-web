@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
-
+import firebase from './Events/firebase';
 
 class ContactUs extends Component {
 
@@ -49,35 +48,24 @@ class ContactUs extends Component {
 
       onSubmit(e) {
         e.preventDefault();
-  
-        const Params = {
-          name: this.state.name,        
-          email: this.state.email,
-          contact: this.state.contact,
-          comment: this.state.comment,
-         
-        };
-  
-    //     axios({
-    //       method: 'POST',
-    //       url: '#',
-    //       data: Params
-    //     }).then(response => {
-    //       if (response.data.success) {
-    //         alert("Response Noted");
-    //      //    this.props.onSubmit(response.data.success);
-    //         this.setState({
-    //           name: '',
-    //           course:'',
-    //           email: '',             
-    //           contact: ''              
-    //         });
-    //       } else {
-    //         // alert(response.data.message);
-    //      //    this.props.onSubmit(response.data.message);
-    //       }
-    //     });
-    //   }
+        console.log(this.state);
+
+        var database = firebase.database();
+        database.ref('contactus').push(this.state,finished);
+    
+        function finished(error) {
+          if (error) {
+            alert('Try Again');
+          } else {
+            alert('Data Saved!');
+          }
+        }
+        this.setState({
+          name: '',
+          email: '',
+          contact: '',
+          comment:''
+        });    
 
     }
     render() {

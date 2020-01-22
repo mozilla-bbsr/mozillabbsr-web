@@ -79,7 +79,7 @@ body {
 }
 
 
-.mainheading { color: #2F363F; font-family: 'Righteous', cursive; font-size: 50px; font-weight: normal; line-height: 60px; margin: 10px 0 20px; text-transform: uppercase; margin: 10px 0 24px; text-align: center}
+.mainheading { color: #2F363F; font-family: 'Nunito Sans', sans-serif; font-size: 45px; font-weight: regular; line-height: 60px; margin: 10px 0 20px; text-transform: uppercase; margin: 10px 0 24px; text-align: center}
 
 
 /* ============SERVICES CSS=============== */

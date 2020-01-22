@@ -8,7 +8,7 @@ import '../App.css'
 class UploadEvent extends Component {
   constructor() {
     super();
-    this.ref = firebase.firestore().collection('mozilla-frontweb');
+    // this.ref = firebase.firestore().collection('events');
     this.state = {
       title: '',
       date:'',
@@ -22,40 +22,49 @@ class UploadEvent extends Component {
     this.setState(state);
   }
 
-  componentDidMount() {
-    
-
-
-  }
-
   onSubmit = (e) => {
     e.preventDefault();
     console.log(this.state);
 
-    const { title, date,  hashtags, description } = this.state;
+    var database = firebase.database();
+    database.ref('events').push(this.state,finished);
 
-    this.ref.add({
-      title,
-      date,
-      description,
-      hashtags
-
-    }).then((docRef) => {
-
-      this.setState({
-        title: '',
-        description: '',
-        date: '',
-        hashtags:''
-
-      });
-
-      this.props.history.push("/")
-    })
-    
-    .catch((error) => {
-      console.error("Error adding document: ", error);
+    function finished(error) {
+      if (error) {
+        alert('Try Again');
+      } else {
+        alert('Data Saved!');
+      }
+    }
+    this.setState({
+      title: '',
+      description: '',
+      date: '',
+      hashtags:''
     });
+    // const { title, date,  hashtags, description } = this.state;
+    // this.ref.add({
+    //   title,
+    //   date,
+    //   description,
+    //   hashtags
+
+    // }).then((docRef) => {
+
+      // this.setState({
+      //   title: '',
+      //   description: '',
+      //   date: '',
+      //   hashtags:''
+
+      // });
+
+    //   this.props.history.push("/")
+    // })
+    
+    // .catch((error) => {
+    //   console.error("Error adding document: ", error);
+    // });
   }
 
   render() {

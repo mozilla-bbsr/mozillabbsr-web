@@ -3,14 +3,53 @@ import ReactDOM from "react-dom";
 import FileUploader from "react-firebase-file-uploader";
  
 import firebase from './Events/firebase';
+
+
  
-class ImgUpload extends React.Component {
-  state = {
-    filenames: [],
-    downloadURLs: [],
-    isUploading: false,
-    uploadProgress: 0
-  };
+export default class ImgUpload extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.onChangeEventname = this.onChangeEventname.bind(this);
+
+    this.state = {
+
+      events:[],
+      event_name: '',
+
+      filenames: [],
+      downloadURLs: [],
+      isUploading: false,
+      uploadProgress: 0
+    };
+  }
+
+  onChangeEventname(e) {
+    this.setState({
+      event_name: e.target.value
+    });
+    console.log(this.state);
+  }
+
+
+  componentDidMount() {
+    const eventRef = firebase.database().ref('events');
+    eventRef.on('value',(snapshot) => {
+      let events = snapshot.val();
+      let newState = [];
+      for( let event in events) {
+        newState.push({
+          id:event,
+          title: events[event].title,          
+        });
+      }
+      this.setState({
+        events:newState
+      });
+    });
+  }
+  
  
   handleUploadStart = () =>
     this.setState({
@@ -34,7 +73,8 @@ class ImgUpload extends React.Component {
   handleUploadSuccess = async filename => {
     const downloadURL = await firebase
       .storage()
-      .ref("images")
+      .ref("images/MozillaEvents/")
+      .child(`${this.state.event_name}`)
       .child(filename)
       .getDownloadURL();
  
@@ -44,6 +84,8 @@ class ImgUpload extends React.Component {
       uploadProgress: 100,
       isUploading: false
     }));
+
+    console.log(this.state);
   };
 
    
@@ -58,7 +100,24 @@ class ImgUpload extends React.Component {
             <br/>
           </div>
 
-          
+          <div className='form-group text-center col-sm-6 mx-auto md-form'>
+            <p>Select The Event To Upload Photos</p>
+            <select
+              required
+              className='form-control'
+              value={this.state.eventname}
+              onChange={this.onChangeEventname}
+            >
+              {this.state.events.map((title) =>{
+                return (
+                  <option>{title.title}</option>
+                )
+              })}
+            </select>
+          </div>
+
+
+
           <label style={{backgroundColor: 'steelblue', color: 'white', padding: 10, borderRadius: 4, cursor: 'pointer'}}>
     Choose Images To Be Uploaded
         <FileUploader
@@ -66,7 +125,7 @@ class ImgUpload extends React.Component {
           accept="image/*"
           name="image-uploader-multiple"
           randomizeFilename
-          storageRef={firebase.storage().ref("images")}
+          storageRef={firebase.storage().ref(`images/MozillaEvents/${this.state.event_name}`)}
           onUploadStart={this.handleUploadStart}
           onUploadError={this.handleUploadError}
           onUploadSuccess={this.handleUploadSuccess}
@@ -89,6 +148,5 @@ class ImgUpload extends React.Component {
   }
 }
 
-export default ImgUpload;
 
 
