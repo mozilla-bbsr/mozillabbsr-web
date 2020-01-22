@@ -115,7 +115,7 @@ class ContactUs extends Component {
                         </ul>
                         </div>
                         <div>          
-                        <iframe width="400" height="250" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJDzaPvBkJGToR8UA0jpGOaV8&key=AIzaSyAb9os1EmwXBnbaG1GuGfefpCdJchFq5nk" allowfullscreen></iframe>         
+                        <iframe  frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJDzaPvBkJGToR8UA0jpGOaV8&key=AIzaSyAb9os1EmwXBnbaG1GuGfefpCdJchFq5nk" allowfullscreen></iframe>         
                 </div>
                         <hr/>
                     

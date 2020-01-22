@@ -1,6 +1,6 @@
-/* .navbar-default {
-    background-color: rgb(0, 0, 0);
-	/* border-color: #E7E7E7; */
+body {
+	overflow-x: hidden; /* Hide horizontal scrollbar */
+  }
 
 #mozilla-typing-text {
   font-family: 'Work Sans', sans-serif;

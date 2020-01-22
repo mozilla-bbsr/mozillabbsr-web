@@ -34,6 +34,7 @@ const Footer = () => {
           <div class="media">          
               <div class="media-body">
                     <Link to='/'><p class="text-center">Home</p></Link>
+                    <Link to='/about'><p class="text-center">About</p></Link>
                     <Link to='/events'><p class="text-center">Events</p></Link>
                     <Link to='/contact'><p class="text-center">Contact Us</p></Link>
                     <Link to='/gallery'><p class="text-center">Gallery</p></Link>         

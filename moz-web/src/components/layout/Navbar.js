@@ -36,7 +36,7 @@ authListener() {
 
   render() {
        return (
-          <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+          <nav class="navbar navbar-custom navbar-expand-lg navbar-dark  py-3">
             <div class="container"><a href="#" class="navbar-brand d-flex align-items-center"><img src="https://www.mozilla.org/media/protocol/img/logos/mozilla/black.40d1af88c248.svg"></img></a>
               <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
               <div id="navbarSupportedContent" class="collapse navbar-collapse">

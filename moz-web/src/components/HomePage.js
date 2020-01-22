@@ -1,6 +1,7 @@
 import React from 'react';
 import Typing, { Cursor } from 'react-typing-animation';
 import LazyHero from 'react-lazy-hero';
+import TypeIt from 'typeit';
 
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -26,7 +27,7 @@ import event5 from '../assets/Events/5.jpg';
 
 
 const AnimatedTypingComponent = () => (
-  <Typing speed={50}>
+  <Typing speed={30}>
     <span id="mozilla-typing-text">Welcome to Mozilla BBSR</span>
     <Cursor />
   </Typing>
@@ -36,6 +37,11 @@ const cardStyle = {
   width: '18rem'
 }
 
+const typeStyle = {
+  fontSize:"50px",
+  fontFamily:"'Nunito Sans', sans-serif",  
+};
+
 class HomePage extends React.Component {
 
   lazyheroStyle = {
@@ -44,6 +50,15 @@ class HomePage extends React.Component {
   };
 
   componentDidMount() {
+
+    new TypeIt('#simpleUsage', {
+      strings: ["<strong>Welcome to Mozilla BBSR</strong>","Tagline not found..make one"],
+      speed: 90,
+      waitUntilVisible: true,
+      breakLines: false,
+    }).go();
+
+  
 
     var radius = 80; // adjust to move out items in and out 
     var fields = $('.item'),
@@ -85,7 +100,8 @@ class HomePage extends React.Component {
           <div class="row">
           <div class="col-sm-5 col-lg-10 text-center">
           <LazyHero style={this.lazyheroStyle} imageSrc={logo}  isCentered={true}>
-            {AnimatedTypingComponent()}
+          <p id="simpleUsage" style={typeStyle}></p>
+            {/* {AnimatedTypingComponent()} */}
           </LazyHero>
      
 

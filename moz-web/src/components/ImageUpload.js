@@ -57,6 +57,8 @@ class ImgUpload extends React.Component {
             </h3>
             <br/>
           </div>
+
+          
           <label style={{backgroundColor: 'steelblue', color: 'white', padding: 10, borderRadius: 4, cursor: 'pointer'}}>
     Choose Images To Be Uploaded
         <FileUploader

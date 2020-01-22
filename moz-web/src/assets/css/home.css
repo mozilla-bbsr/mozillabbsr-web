@@ -4,6 +4,11 @@
     position: absolute;
     z-index: 2;
     width: 100%;
+    /* padding-top: 60px; */
+}
+
+.navbar-custom {
+    background-color: #000000;
 }
 
 .wrapper {
@@ -178,3 +183,12 @@
         transform: translateX(-50%);
     }
 }
+
+/* body {
+    padding-top: 60px;
+  }
+  @media (max-width: 979px) {
+    body {
+      padding-top: 0px;
+    }
+  } */

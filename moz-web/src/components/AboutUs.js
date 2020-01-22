@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {Link} from 'react-router-dom';
 import ReactFullpage from '@fullpage/react-fullpage';
@@ -171,8 +171,9 @@ const Fullpage = () => (
                 </div>
                 </div>
           </div>       
-          <div className="section">
-              <div className="fp-auto-height">
+          <div className="section  fp-auto-height-responsive" style={{backgroundColor: '#000000'}}>
+              {/* <div className=""> */}
+              <br/><br/><br/>
               <footer class="footer  py-10">
   <div class="container">
     <div class="row text-white">
@@ -245,7 +246,7 @@ const Fullpage = () => (
 
               </div>
          
-                    </div>
+                    {/* </div> */}
         </ReactFullpage.Wrapper>
       );
     }}
@@ -253,7 +254,6 @@ const Fullpage = () => (
 );
 
 export default Fullpage;
-
 
 
 
