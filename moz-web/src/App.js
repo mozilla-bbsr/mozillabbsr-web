@@ -13,6 +13,7 @@ import Events from './components/Events/Events';
 import MemberLogin from './components/MemberLogin';
 import UploadEvent from './components/UploadEvent';
 import ImgUpload from './components/ImageUpload';
+import Gallery from './components/Gallery';
 
 class App extends Component {
 
@@ -53,6 +54,7 @@ class App extends Component {
           <Route path='/Contact' component={ContactUs} />
           <Route path='/events' component={Events} />
           <Route path='/img' component={ImgUpload} />
+          <Route path='/Gallery' component={Gallery} />
           <div>{this.state.user ?  (<Route path='/admin' component={UploadEvent} />) : (<Route path='/login' component={MemberLogin} />)}</div>
         </Switch>
         <br/>

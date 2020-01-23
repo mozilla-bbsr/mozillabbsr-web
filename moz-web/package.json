@@ -16,6 +16,7 @@
     "react-dom": "^16.9.0",
     "react-firebase-file-uploader": "^2.4.3",
     "react-lazy-hero": "^2.0.0",
+    "react-material-ui-carousel": "^1.1.1",
     "react-owl-carousel": "^2.3.1",
     "react-router-dom": "^5.1.0",
     "react-scripts": "^3.3.0",
@@ -30,7 +31,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy":"npm run build && firebase deploy"
+    "deploy": "npm run build && firebase deploy"
   },
   "eslintConfig": {
     "extends": "react-app"
