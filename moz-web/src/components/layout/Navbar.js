@@ -51,9 +51,7 @@ authListener() {
                   <li class="nav-item ">
                   <Link to='/events' className='nav-link text-center text-white'style={{ fontFamily: 'sans-serif' }}>  Events   </Link>    
                   </li>             
-                  <li class="nav-item ">
-                  <Link to='/Gallery' className='nav-link text-center text-white'style={{ fontFamily: 'sans-serif' }}>  Gallery   </Link>    
-                  </li> 
+                 
                   <li class="nav-item ">
                   <Link to='/Contact' className='nav-link  text-center text-white'style={{ fontFamily: 'sans-serif' }}>  Contact   </Link>    
                   </li> 

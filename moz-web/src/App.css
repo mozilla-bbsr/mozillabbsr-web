@@ -256,3 +256,11 @@ figure.effect-chico:hover p {
   [file-drop-preview] > div {
 	margin: 0.25em;
   }
+
+  .CarImage {
+	  width: 100%;
+	  
+  }
+  .carousel{
+	  margin: 0 auto;
+  }

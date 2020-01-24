@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -33,11 +33,14 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 function EventModal({event, open, handleClose}) {
     const classes = useStyles();
+   
 
     if(!event.title)
     {
         return <div></div>;
     }
+    
+    
     return (
       <div>
         
@@ -50,7 +53,7 @@ function EventModal({event, open, handleClose}) {
           aria-labelledby="alert-dialog-slide-title"
           aria-describedby="alert-dialog-slide-description"
         >
-        <AppBar className={classes.appBar}>
+        {/*<AppBar className={classes.appBar}>
           <Toolbar>
             <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close">
               <CloseIcon />
@@ -59,7 +62,15 @@ function EventModal({event, open, handleClose}) {
               {event.title}
             </Typography>
           </Toolbar>
-        </AppBar>
+        </AppBar>*/}
+        <Toolbar>
+            <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close">
+              <CloseIcon />
+            </IconButton>
+            <Typography variant="h2" className={classes.title}>
+              {event.title}
+            </Typography>
+          </Toolbar>
         <Typography variant="h6" >
             {event.description}
         </Typography>
@@ -77,6 +88,9 @@ function EventModal({event, open, handleClose}) {
               Close
             </Button>
     </DialogActions>*/}
+    <Gallery name={event.title} key={event.title}/>
+
+
         </Dialog>
       </div>
     );
