@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {Link} from 'react-router-dom';
 import ReactFullpage from '@fullpage/react-fullpage';
 import Logo from '../assets/logo-footer.png';
+import Footer from '../components/layout/Footer'
  
 // NOTE: if using fullpage extensions/plugins put them here and pass it as props
 
@@ -171,82 +172,11 @@ const Fullpage = () => (
                 </div>
                 </div>
           </div>       
-          <div className="section  fp-auto-height-responsive" style={{backgroundColor: '#000000'}}>
-              {/* <div className=""> */}
+          <div className="section  fp-auto-height-responsive" style={{backgroundColor: '#000000'}}>             
               <br/><br/><br/>
-              <footer class="footer  py-10">
-  <div class="container">
-    <div class="row text-white">
-    <div class="col-sm-3">
-            <h3 class="text-center font-weight-bold">Mozilla BBSR</h3>
-            <br/>
-            <div class="text-center">
-                    <img src={Logo} class="mx-auto" height='200' />
-            </div>
-    </div>
-   
-
-     <br/>
-      <div class="col-sm-2">
-      <div class="footer-widget">
-        <h3 class="text-center font-weight-bold">Site Map</h3>
-        <div class="footer-widget-content">
-          <div class="media">          
-              <div class="media-body">
-                    <Link to='/'><p class="text-center">Home</p></Link>
-                    <Link to='/events'><p class="text-center">Events</p></Link>
-                    <Link to='/contact'><p class="text-center">Contact Us</p></Link>
-                    <Link to='/gallery'><p class="text-center">Gallery</p></Link>         
-              </div>
-           </div>
-        </div>
-        </div>
-      </div>    
-      <div class="col-sm-4 text-center">
-      <h3 class="text-center font-weight-bold">Latest Events</h3>
-      {/* <div class="footer-widget-content text-center">
-          <div class="images-gellary ">
-            <ul>                
-              <li><a href="#"><img src={event1} width='200%' alt="Instagram 04"/></a></li>
-              <li><a href="#"><img src={event1} width='200%' alt="Instagram 05"/></a></li>
-              <li><a href="#"><img src={event1} width='200%' alt="Instagram 06"/></a></li>
-            </ul>
-          </div>
-        </div> */}
-     </div>  
-     <br/> 
-     <div class="col-sm-3 text-center">
-        <div class="footer-widget">
-          <h3 class="font-weight-bold">Stay in touch</h3>
-          <div class="footer-widget-content">
-          <ul className="list-unstyled">
-                            <li> School Of Computer Engineering</li>
-                            <li> KIIT University</li>
-                            <li> Bhubaneswar, Odisha </li>
-                        </ul>
-            <a href="mailto:sales@example.com" class="contact-link">mozillabbsr@gmail.com</a>
-            <a href="tel:0121234" class="contact-link">+91- 079799 44709</a>
-            <div class="footer-social">
-                <ul>
-                <li><a href="https://www.facebook.com/mozillabbsr/"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter mr-3"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin mr-3"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube mr-3"></i></a></li>
-                <li><a href="mailto:mozillabbsr@gmail.com?Subject=Hello"><i className="fa fa-envelope mr-3 " ></i></a></li>              
-                </ul>
-            </div>
-          </div>
-        </div>
-      </div>   
-      
-
-    </div>
-  </div>
-</footer>
-
-              </div>
-         
-                    {/* </div> */}
+              <Footer/>             
+          </div>         
+                 
         </ReactFullpage.Wrapper>
       );
     }}

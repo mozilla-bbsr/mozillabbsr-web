@@ -22,6 +22,7 @@ import event2 from '../assets/Events/2.jpg';
 import event3 from '../assets/Events/3.jpg';
 import event4 from '../assets/Events/4.jpg';
 import event5 from '../assets/Events/5.jpg';
+import event6 from '../assets/Events/6.jpg';
 
 
 
@@ -52,7 +53,7 @@ class HomePage extends React.Component {
   componentDidMount() {
 
     new TypeIt('#simpleUsage', {
-      strings: ["<strong>Welcome to Mozilla BBSR</strong>","Tagline not found..make one"],
+      strings: ["<strong>Welcome to Mozilla BBSR</strong>","We Believe in Spreading Web Literacy"],
       speed: 90,
       waitUntilVisible: true,
       breakLines: false,
@@ -173,11 +174,13 @@ class HomePage extends React.Component {
                                 }}
                               }
                                >
-                        <div class="col-sm-8  mx-auto"><img src={event1}/></div>
-                        <div class="col-sm-8  mx-auto"><img src={event2}/></div>
-                        <div class="col-sm-8  mx-auto"><img src={event3}/></div>
-                        <div class="col-sm-8  mx-auto"><img src={event4}/></div>
-                      <div class="col-sm-8  mx-auto"><img src={event5}/></div>             </OwlCarousel>
+                        <div class="col-sm-8  mx-auto"><img src={event1} width="200" height="300"/></div>
+                        <div class="col-sm-8  mx-auto"><img src={event2} width="200" height="300"/></div>
+                        <div class="col-sm-8  mx-auto"><img src={event3} width="200" height="300"/></div>
+                        <div class="col-sm-8  mx-auto"><img src={event4} width="200" height="300"/></div>
+                        <div class="col-sm-8  mx-auto"><img src={event5} width="200" height="300"/></div>
+                        <div class="col-sm-8  mx-auto"><img src={event6} width="200" height="300"/></div>             
+                      </OwlCarousel>
           </div>          
         </div>
       </div>
@@ -192,7 +195,7 @@ class HomePage extends React.Component {
                       <div class="col-md-3 col-sm-6 col-md-2">
                       <div class="grid">
                       <figure class="effect-chico">
-                        <img src="https://pixabay.com/static/uploads/photo/2015/10/22/17/32/smoke-1001664_960_720.png"  alt="img04"/>
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" width="300" height="200"  alt="img04"/>
                         <figcaption>
                           <h2> <span>Web</span></h2>
                           <p>Websites promote you 24/7: No employee will do that.</p>
@@ -204,7 +207,7 @@ class HomePage extends React.Component {
                       <div class="col-md-3 col-sm-6 col-md-2">
                       <div class="grid">
                         <figure class="effect-chico">
-                          <img src="https://pixabay.com/static/uploads/photo/2015/09/09/06/54/sisters-931151_960_720.jpg"  alt="img15"/>
+                          <img src="https://blog.intercomassets.com/blog/wp-content/uploads/2017/03/Tips_for_Running_Design_Workshops_Logo.jpg.optimal.jpg"  alt="img15" width="300" height="200"/>
                           <figcaption>
                             <h2> <span>Workshops</span></h2>
                             <p>Live as if you were to die tomorrow. Learn as if you were to live forever.</p>
@@ -216,7 +219,7 @@ class HomePage extends React.Component {
                       <div class="col-md-3 col-sm-6 col-md-2">
                       <div class="grid">
                       <figure class="effect-chico">
-                        <img src="https://pixabay.com/static/uploads/photo/2015/10/22/17/32/smoke-1001664_960_720.png"  alt="img04"/>
+                        <img src="https://image.freepik.com/free-photo/anonymous-user-clicking-pink-usb-computer-mouse_23-2148182077.jpg" width="300" height="200"  alt="img04"/>
                         <figcaption>
                           <h2> <span>Training</span></h2>
                           <p>In learning you will teach, and in teaching you will learn.</p>
@@ -228,7 +231,7 @@ class HomePage extends React.Component {
                       <div class="col-md-3 col-sm-6 col-md-2">
                       <div class="grid">
                         <figure class="effect-chico">
-                          <img src="https://pixabay.com/static/uploads/photo/2015/09/09/06/54/sisters-931151_960_720.jpg"   alt="img15"/>
+                          <img src="https://image.freepik.com/free-vector/red-paper-airplane-fly-dark-blue-background_44481-304.jpg" width="300" height="200"  alt="img15"/>
                           <figcaption>
                             <h2> <span>Projects</span></h2>
                             <p>Every project is an opportunity to learn, to figure out problems to invent and reinvent.</p>

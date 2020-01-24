@@ -45,15 +45,19 @@ const Footer = () => {
       </div>    
       <div class="col-sm-4 text-center">
       <h3 class="text-center font-weight-bold">Latest Events</h3>
-      {/* <div class="footer-widget-content text-center">
-          <div class="images-gellary ">
-            <ul>                
-              <li><a href="#"><img src={event1} width='200%' alt="Instagram 04"/></a></li>
-              <li><a href="#"><img src={event1} width='200%' alt="Instagram 05"/></a></li>
-              <li><a href="#"><img src={event1} width='200%' alt="Instagram 06"/></a></li>
-            </ul>
-          </div>
-        </div> */}
+      <div class="footer-widget-content">
+          <div class="media">          
+              <div class="media-body">
+                <br/>
+                
+                    <Link to='/'><p class="text-center">Home</p></Link>
+                    <Link to='/about'><p class="text-center">About</p></Link>
+                    <Link to='/events'><p class="text-center">Events</p></Link>
+                    <Link to='/contact'><p class="text-center">Contact Us</p></Link>
+                    <Link to='/gallery'><p class="text-center">Gallery</p></Link>         
+              </div>
+           </div>
+        </div>
      </div>  
      <br/> 
      <div class="col-sm-3 text-center">
