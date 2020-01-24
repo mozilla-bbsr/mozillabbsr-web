@@ -18,6 +18,7 @@
     "react-lazy-hero": "^2.0.0",
     "react-material-ui-carousel": "^1.1.1",
     "react-owl-carousel": "^2.3.1",
+    "react-responsive-carousel": "^3.1.51",
     "react-router-dom": "^5.1.0",
     "react-scripts": "^3.3.0",
     "react-typing-animation": "^1.6.2",

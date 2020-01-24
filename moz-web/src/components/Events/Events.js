@@ -5,6 +5,7 @@ import Event from './Event'
 import Typography from '@material-ui/core/Typography';
 
 
+
 function Events()
 {
   const useFirestoreQuery = (eventRef) => {
@@ -94,17 +95,31 @@ function Events()
     
     return(
       <div>      
-        <Typography variant="h2">
+        <br/> <br/><br/><br/>
+        {/* <Typography variant="h2">
           Events
-        </Typography>
+        </Typography> */}
+        <h1 class="display-4 text-center">Past Events</h1>
+        <hr width="50%"/>
+        <div class="container">
+          <br/>
+       
+          <center>
+        <div class="card-deck mx-auto text-center">         
+          
           <EventModal open={open} event={selectedEvent} handleClose={handleClose}/>
                 {events.map(
                     (event)=> <Event event={event} onClick={() =>{
                         handleClickOpen();
                         selectEvent(event)}}/>
                 )
-          }
+          }       
+
         </div>
+        </center>
+        </div>
+        </div>
+       
     );
 }
 

@@ -1,8 +1,12 @@
 import React,{ useState , useEffect} from 'react';
+
 import firebase from './Events/firebase';
-import Carousel from 'react-material-ui-carousel'
+// import Carousel from 'react-material-ui-carousel'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 import $ from 'jquery'
 import { Typography } from '@material-ui/core';
+
 
 class Gallery extends React.Component {
     constructor(props) {
@@ -31,7 +35,7 @@ class Gallery extends React.Component {
         
         images.getDownloadURL().then((url)=>{
 
-            console.log(url);
+            // console.log(url);
 
             this.setState({
                 urls: [ ...this.state.urls, url]
@@ -44,11 +48,18 @@ class Gallery extends React.Component {
     
     render() {
         return(
-            <div id='List'>
-           <Carousel className='carousel'>
+            <div>
+           {/* <Carousel className='carousel'>
                {this.state.urls.map( url => <img src={url} className='CarImage'/>)}
-           </Carousel>
+           </Carousel> */}
 
+            <Carousel showArrows={true} useKeyboardArrows={true}	 >
+            {this.state.urls.map( url =>  <div>
+                                <img src={url} />
+                                
+                            </div>)}              
+               
+            </Carousel>          
             </div>
         );
     }

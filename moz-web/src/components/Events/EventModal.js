@@ -42,7 +42,7 @@ function EventModal({event, open, handleClose}) {
     
     
     return (
-      <div>
+      <div class="container">
         
         <Dialog
           fullScreen
@@ -53,7 +53,7 @@ function EventModal({event, open, handleClose}) {
           aria-labelledby="alert-dialog-slide-title"
           aria-describedby="alert-dialog-slide-description"
         >
-        {/*<AppBar className={classes.appBar}>
+        {/* <AppBar className={classes.appBar}>
           <Toolbar>
             <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close">
               <CloseIcon />
@@ -62,18 +62,18 @@ function EventModal({event, open, handleClose}) {
               {event.title}
             </Typography>
           </Toolbar>
-        </AppBar>*/}
+        </AppBar> */}
         <Toolbar>
             <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close">
               <CloseIcon />
             </IconButton>
-            <Typography variant="h2" className={classes.title}>
-              {event.title}
+            <Typography variant="h6" className={classes.title}>
+              <center>{event.title}</center>
             </Typography>
           </Toolbar>
-        <Typography variant="h6" >
+         {/* <Typography variant="h6" >
             {event.description}
-        </Typography>
+        </Typography> */}
 
             {/*<DialogTitle id="alert-dialog-slide-title">
               {event.name} - 
