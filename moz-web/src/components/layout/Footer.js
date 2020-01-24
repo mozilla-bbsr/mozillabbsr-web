@@ -8,10 +8,39 @@ import event1 from '../../assets/Events/1.jpg';
 // import event4 from '../assets/Events/4.jpg';
 // import event5 from '../assets/Events/5.jpg';
 
-
+import firebase from '../Events/firebase';
 import '../../assets/css/footer.css'
 
-const Footer = () => {
+export default class Footer extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+
+      events:[],
+      event_name: '',      
+    };
+  }
+
+  componentDidMount() {
+    const eventRef = firebase.database().ref('events').limitToLast(5);
+    eventRef.on('value',(snapshot) => {
+      let events = snapshot.val();
+      let newState = [];
+      for( let event in events) {
+        newState.push({
+          id:event,
+          title: events[event].title,          
+        });
+      }
+      this.setState({
+        events:newState
+      });
+    });
+  }
+
+  render(){
   return (
     <div>
      <footer class="footer">
@@ -49,13 +78,12 @@ const Footer = () => {
           <div class="media">          
               <div class="media-body">
                 <br/>
-                
-                    <Link to='/'><p class="text-center">Home</p></Link>
-                    <Link to='/about'><p class="text-center">About</p></Link>
-                    <Link to='/events'><p class="text-center">Events</p></Link>
-                    <Link to='/contact'><p class="text-center">Contact Us</p></Link>
-                    <Link to='/gallery'><p class="text-center">Gallery</p></Link>         
-              </div>
+                {this.state.events.map((title) =>{
+                return (
+                  <p class="text-center">{title.title}</p>
+                )
+              })}
+             </div>
            </div>
         </div>
      </div>  
@@ -91,5 +119,4 @@ const Footer = () => {
     </div>
   );
 };
-
-export default Footer;
+}
