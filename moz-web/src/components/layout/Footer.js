@@ -72,7 +72,7 @@ export default class Footer extends React.Component {
         </div>
         </div>
       </div>    
-      <div class="col-sm-4 text-center">
+      <div class="col-sm-3 text-center">
       <h3 class="text-center font-weight-bold">Latest Events</h3>
       <div class="footer-widget-content">
           <div class="media">          
@@ -88,7 +88,7 @@ export default class Footer extends React.Component {
         </div>
      </div>  
      <br/> 
-     <div class="col-sm-3 text-center">
+     <div class="col-sm-4 text-center">
         <div class="footer-widget">
           <h3 class="font-weight-bold">Stay in touch</h3>
           <div class="footer-widget-content">
@@ -99,8 +99,13 @@ export default class Footer extends React.Component {
                         </ul>
             <a href="mailto:sales@example.com" class="contact-link">mozillabbsr@gmail.com</a>
             <a href="tel:0121234" class="contact-link">+91- 079799 44709</a>
+         
             <div class="footer-social">
                 <ul>
+
+                <li></li> {/* for Center Aligning in Mobile Mode */}
+                <li></li>
+              
                 <li><a href="https://www.facebook.com/mozillabbsr/"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter mr-3"></i></a></li>
                 <li><a href="#"><i class="fa fa-linkedin mr-3"></i></a></li>
@@ -108,7 +113,8 @@ export default class Footer extends React.Component {
                 <li><a href="mailto:mozillabbsr@gmail.com?Subject=Hello"><i className="fa fa-envelope mr-3 " ></i></a></li>              
                 </ul>
             </div>
-          </div>
+            </div>
+         
         </div>
       </div>   
       

@@ -57,7 +57,7 @@ class ContactUs extends Component {
           if (error) {
             alert('Try Again');
           } else {
-            alert('Data Saved!');
+            alert('Your Response has been noted. You would be contacted shortly');
           }
         }
         this.setState({
@@ -150,14 +150,12 @@ class ContactUs extends Component {
 
                 <br />
                 <div class='form-group text-center'>
-                  <button
-                    class='btn btn-default text-white btn-lg'
-                    style={{ fontFamily: 'Acme' }}
-                  >
-                    Send <i class='fa fa-paper-plane-o ml-1'></i>
+                  <button class='btn btn-light px-5 rounded-pill shadow-sm'>
+                    Submit 
                   </button>
                 </div>
-              </form>                      
+              </form>                   
+             
                         </div>
                         <br/>
                         <hr/>
