@@ -53,8 +53,10 @@ class App extends Component {
           <Route path='/About' component={AboutUs} />
           <Route path='/Contact' component={ContactUs} />
           <Route path='/events' component={Events} />
-          <div>{this.state.user ?  (<Route path='/admin' component={UploadEvent} />) : (<Route path='/login' component={MemberLogin} />)}</div>
-          <div>{this.state.user ?  (<Route path='/img' component={ImgUpload} />) : (<Route path='/login' component={MemberLogin} />)}</div>
+          {/* <Route path='/img' component={ImgUpload} /> */}
+          <div>{this.state.user ?  (<Route path='/admin' component={UploadEvent} />) : (<Route path='/login' component={MemberLogin} />)}
+
+          {this.state.user ?  (<Route path='/img' component={ImgUpload} />) : (<Route path='/login'  />)}</div>
         </Switch>
         <br/>
         <br/>

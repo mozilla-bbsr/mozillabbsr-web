@@ -66,7 +66,7 @@ export default class Footer extends React.Component {
                     <Link to='/about'><p class="text-center">About</p></Link>
                     <Link to='/events'><p class="text-center">Events</p></Link>
                     <Link to='/contact'><p class="text-center">Contact Us</p></Link>
-                    <Link to='/gallery'><p class="text-center">Gallery</p></Link>         
+                    <Link to='/login'><p class="text-center">Login</p></Link>        
               </div>
            </div>
         </div>
