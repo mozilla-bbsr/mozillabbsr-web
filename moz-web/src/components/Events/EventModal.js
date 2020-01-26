@@ -67,13 +67,16 @@ function EventModal({event, open, handleClose}) {
             <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close">
               <CloseIcon />
             </IconButton>
-            <Typography variant="h6" className={classes.title}>
+            <Typography variant="h2" className={classes.title}>
               <center>{event.title}</center>
             </Typography>
           </Toolbar>
-         {/* <Typography variant="h6" >
+          <br></br>
+          <hr width="50%"/>
+         <Typography variant="h6" >
             {event.description}
-        </Typography> */}
+        </Typography> 
+        <br></br>
 
             {/*<DialogTitle id="alert-dialog-slide-title">
               {event.name} - 
@@ -88,7 +91,7 @@ function EventModal({event, open, handleClose}) {
               Close
             </Button>
     </DialogActions>*/}
-    <Gallery name={event.title} key={event.title}/>
+    <center><Gallery name={event.title} key={event.title}/></center>
 
 
         </Dialog>

@@ -28,9 +28,8 @@ function Event({event, onClick})
       {/* <img src={`https://picsum.photos/1000/700/?random=${event.title}`} className="card-img-top" alt="..."/> */}
       <div class="card-body">
         <h5 class="card-title">{event.title}</h5>
-        <p class="card-text text-white">{event.description}</p>
-        <p class="card-text text-white"><small class="text-muted text-white">{event.hashtags}</small></p>
-        <a onClick={onClick} class="btn btn-primary stretched-link">Gallery</a>
+        <p class="card-text text-white">{event.hashtags}</p>
+        <a onClick={onClick} class="btn btn-primary stretched-link">Learn More</a>
       </div>
     </div>
   </div>
@@ -44,7 +43,13 @@ function Event({event, onClick})
         //     {/*<div>
         //         <Typography>{job.created_at.split(" ").slice(0, 3).join(' ')}</Typography>
         //     </div>
-         </Paper> */
+         </Paper> 
+         
+         
+         
+         
+         <p class="card-text text-white">{event.description}</p>
+        <p class="card-text text-white"><small class="text-muted text-white">{event.hashtags}</small></p>*/
 
     );
 }
