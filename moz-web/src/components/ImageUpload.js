@@ -1,7 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import FileUploader from "react-firebase-file-uploader";
- 
 import firebase from './Events/firebase';
 
 

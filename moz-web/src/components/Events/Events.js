@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import firebase from './firebase';
 import EventModal from './EventModal';
 import Event from './Event'
-import Typography from '@material-ui/core/Typography';
 
 
 
