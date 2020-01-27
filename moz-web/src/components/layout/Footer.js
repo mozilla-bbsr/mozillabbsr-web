@@ -1,13 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import Logo from '../../assets/logo-footer.png';
-
-import event1 from '../../assets/Events/1.jpg';
-// import event2 from '../assets/Events/2.jpg';
-// import event3 from '../assets/Events/3.jpg';
-// import event4 from '../assets/Events/4.jpg';
-// import event5 from '../assets/Events/5.jpg';
-
 import firebase from '../Events/firebase';
 import '../../assets/css/footer.css'
 
@@ -50,7 +43,7 @@ export default class Footer extends React.Component {
             <h3 class="text-center font-weight-bold">Mozilla BBSR</h3>
             <br/>
             <div class="text-center">
-                    <img src={Logo} class="mx-auto" height='200' />
+                    <img src={Logo} class="mx-auto" height='200' alt="mozillalogo"/>
             </div>
     </div>
    

@@ -1,6 +1,5 @@
 import React from 'react'
-import Typography from '@material-ui/core/Typography';
-import { Paper } from '@material-ui/core';
+
 
 function Event({event, onClick})
 {

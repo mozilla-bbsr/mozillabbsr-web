@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import firebase from './Events/firebase';
-import { Link } from 'react-router-dom';
-
-import $ from 'jquery';
 import '../App.css'
 
 class UploadEvent extends Component {
